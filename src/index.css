@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color: #24211D;
+  background: #F6F0E5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #F6F0E5;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 75% 8%, rgba(180,111,69,.06), transparent 25rem),
+    #F6F0E5;
+}
+
+::selection {
+  background: #45382F;
+  color: #FFF9EF;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid #B46F45;
+  outline-offset: 4px;
+}
+
+.noise {
+  position: relative;
+}
+
+.noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+}
+
+.console-grid {
+  background-image:
+    linear-gradient(rgba(69,56,47,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(69,56,47,.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.project-art {
+  transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.project-card:hover .project-art {
+  transform: scale(1.025);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
