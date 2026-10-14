@@ -8,7 +8,7 @@
 
 **Portfolio React + GSAP ScrollTrigger — hero, work, services, and CTA with pastel Jenius energy.** ✨
 
-[Quickstart](docs/quickstart.md) · [Folder map](docs/folder-map.md) · [Contributing](CONTRIBUTING.md)
+[Quickstart](docs/quickstart.md) · [Folder map](docs/folder-map.md) · [Workspace index](docs/monorepo-index.md) · [Contributing](CONTRIBUTING.md)
 
 </div>
 
